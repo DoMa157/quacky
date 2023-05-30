@@ -14,6 +14,7 @@ dt-launchfile-init
 
 # launching app
 dt-exec python3 -m "test_package.test_script"
+dt-exec python3 -m "visual.visual"
 
 
 # ----------------------------------------------------------------------------
