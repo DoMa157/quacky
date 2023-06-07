@@ -13,9 +13,9 @@ dt-launchfile-init
 # NOTE: Use `dt-exec COMMAND` to run the main process (blocking process)
 
 # launching app
-dt-exec python3 -m "test_package.test_script"
-dt-exec python3 -m "visual.visual"
-
+roscore &
+sleep 5
+dt-exec rosrun test_package my_node.py
 
 # ----------------------------------------------------------------------------
 # YOUR CODE ABOVE THIS LINE
