@@ -15,7 +15,7 @@ dt-launchfile-init
 # launching app
 roscore &
 sleep 5
-dt-exec rosrun test_package my_node.py
+dt-exec rosrun wheels_package wheels_node.py
 
 # ----------------------------------------------------------------------------
 # YOUR CODE ABOVE THIS LINE
