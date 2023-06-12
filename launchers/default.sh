@@ -15,7 +15,8 @@ dt-launchfile-init
 # launching app
 roscore &
 sleep 5
-dt-exec rosrun wheels_package wheels_node.py
+dt-exec rosrun camera_package camera_image_node.py
+#dt-exec rosrun wheels_package wheels_driver_node.py
 
 # ----------------------------------------------------------------------------
 # YOUR CODE ABOVE THIS LINE

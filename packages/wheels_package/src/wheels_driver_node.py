@@ -61,6 +61,6 @@ class WheelsDriver(DTROS):
             # self.cmd_pub.publish(twist)
 
 if __name__ == "__main__":
-    runner = WheelsDriver("wheels_driver")
+    runner = WheelsDriver("wheels_driver_node")
     runner.run()
     rospy.spin()
