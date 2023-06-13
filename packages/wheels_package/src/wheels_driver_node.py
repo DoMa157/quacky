@@ -59,8 +59,19 @@ class WheelsDriver(DTROS):
             self.wheels_cmd_pub.publish(wheel)
             self.wheels_cmd_executed_pub.publish(wheel)
             # self.cmd_pub.publish(twist)
+    
+    def on_shutdown(self):
+        rospy.loginfo('Shutting down...')
+        wheel = WheelsCmdStamped()
+        wheel.vel_right = 0
+        wheel.vel_left = 0
+        self.wheels_cmd_pub.publish(wheel)
 
 if __name__ == "__main__":
     runner = WheelsDriver("wheels_driver_node")
-    runner.run()
-    rospy.spin()
+    while not rospy.is_shutdown():
+        try:
+            runner.run()
+            rospy.spin()
+        except:
+            rospy.on_shutdown(runner.on_shutdown)
